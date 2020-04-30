@@ -7,7 +7,7 @@ A node module to fill out PDF forms using XFDF model format (utf8 compatible).
 It uses [pdftk](http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/) to fill out PDF forms.
 
 ## Installation
-    npm i @henomis/fill-xpdf
+    npm install fill-xpdf
 
 ## Dependencies
 You need to have the ```pdftk``` binary in your PATH.

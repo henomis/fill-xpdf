@@ -1,6 +1,6 @@
 {
-  "name": "@henomis/fill-xpdf",
-  "version": "0.0.1",
+  "name": "fill-xpdf",
+  "version": "0.0.2",
   "description": "Fill out pdf forms using XFDF",
   "main": "index.js",
   "scripts": {
