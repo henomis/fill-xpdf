@@ -1,13 +1,13 @@
-# fill-pdf
+# fill-xpdf
 
-[![Build Status](https://travis-ci.org/dommmel/fill-pdf.svg?branch=master)](https://travis-ci.org/dommmel/fill-pdf)
+<!-- [![Build Status](https://travis-ci.org/dommmel/fill-pdf.svg?branch=master)](https://travis-ci.org/dommmel/fill-pdf) -->
 
-A node module to fill out PDF forms (utf8 compatible).
+A node module to fill out PDF forms using XFDF model format (utf8 compatible).
 
 It uses [pdftk](http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/) to fill out PDF forms.
 
 ## Installation
-    npm install fill-pdf
+    npm install fill-xpdf
 
 ## Dependencies
 You need to have the ```pdftk``` binary in your PATH.
@@ -17,18 +17,18 @@ You need to have the ```pdftk``` binary in your PATH.
 
 * To install PDFtk use [the official installer](http://www.pdflabs.com/tools/pdftk-server/) or if you have [homebrew-cask](https://github.com/phinze/homebrew-cask) installed you can run ```brew cask install pdftk```
 
-### Install on Ubuntu
+### Install on Ubuntu/Debian
 ```sudo apt-get install pdftk```
 
 ## Usage example (with express)
 
 ```js
-const fillPdf = require("fill-pdf");
+const fillPdf = require("fill-xpdf");
 const formData = { FieldName: 'Text to put into form field' };
 const pdfTemplatePath = "templates.pdf";
 
 app.get('/filled_form.pdf', (req, res) => {
-  fillPdf.generatePdf(formData, pdfTemplatePath, function(err, output) {
+  fillPdf.generateXPdf(formData, pdfTemplatePath, function(err, output) {
     if ( !err ) {
       res.type("application/pdf");
       res.send(output);
@@ -46,10 +46,10 @@ For instance, if you want to make the output PDF not editable anymore, you can a
 `flatten` argument such as:
 
 ```js
-const fillPdf = require('fill-pdf');
+const fillPdf = require('fill-xpdf');
 
 const extraArgs = ['flatten'];
-fillPdf.generatePdf(formData, pdfTemplatePath, extraArgs, (err, output) => {
+fillPdf.generateXPdf(formData, pdfTemplatePath, extraArgs, (err, output) => {
   // ...
 });
 ```
@@ -58,4 +58,4 @@ Take a look on `man pdftk` to get a list of all available arguments.
 
 ## Acknowledgements
 
-Based on [utf8-fdf-generator](https://www.npmjs.org/package/utf8-fdf-generator)
+Based on [fill-pdf](https://www.npmjs.org/package/fill-pdf)

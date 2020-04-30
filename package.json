@@ -1,27 +1,28 @@
 {
-  "name": "fill-pdf",
-  "version": "1.1.0",
-  "description": "Fill out pdf forms",
+  "name": "fill-xpdf",
+  "version": "1.0.0",
+  "description": "Fill out pdf forms using XFDF",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/dommmel/fill-pdf"
+    "url": "git://github.com/henomis/fill-xpdf"
   },
   "keywords": [
     "pdf",
     "fdf",
+    "xfdf",
     "utf8",
     "pdftk"
   ],
-  "author": "Dominik Heier <dominik.heier@gmail.com> (http://www.flexify.net/)",
+  "author": "Simone Vellei <henomis@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dommmel/fill-pdf/issues"
+    "url": "https://github.com/henomis/fill-xpdf/issues"
   },
-  "homepage": "https://github.com/dommmel/fill-pdf",
+  "homepage": "https://github.com/henomis/fill-xpdf",
   "dependencies": {
     "async": "^2.0.0-rc.6",
     "temp": "~0.8.3"
